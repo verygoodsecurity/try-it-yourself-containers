@@ -1,0 +1,43 @@
+version: '3'
+services:
+
+  try-it-bash:
+    build: 
+      context: .
+      args:
+        IMAGE: alpine
+        EXEC_LOCATION: bash
+        DEP_INSTALL_CMD: apk add --update curl bash
+    image: try-it-bash:latest
+    env_file:
+      - .env
+    command: bash -c "bash inbound-integration.sh && bash outbound-integration.sh"
+
+  # try-it-go:
+  #     image: redis
+
+  # try-it-java:
+  #     image: redis
+
+  try-it-python:
+    build: 
+      context: .
+      args:
+        IMAGE: python:3.8
+        EXEC_LOCATION: python
+        DEP_INSTALL_CMD: pip install -r requirements.txt
+    image: try-it-python:latest
+    env_file:
+      - .env
+    command: bash -c "python inbound-integration.py && python outbound-integration.py"
+
+  try-it-ruby:
+    build: 
+      context: .
+      args:
+        IMAGE: ruby:2.7.1
+        EXEC_LOCATION: ruby
+    image: try-it-ruby:latest
+    env_file:
+      - .env
+    command: bash -c "ruby inbound-integration.rb && ruby outbound-integration.rb"

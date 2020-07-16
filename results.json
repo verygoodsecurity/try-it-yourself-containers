@@ -1,0 +1,22 @@
+{
+    "bash": {
+        "inbound-integration": "",
+        "outbound-integration": ""
+    },
+    "go": {
+        "inbound-integration": "",
+        "outbound-integration": ""
+    },
+    "java": {
+        "inbound-integration": "",
+        "outbound-integration": ""
+    },
+    "python": {
+        "inbound-integration": "",
+        "outbound-integration": ""
+    },
+    "ruby": {
+        "inbound-integration": "",
+        "outbound-integration": ""
+    }
+}
