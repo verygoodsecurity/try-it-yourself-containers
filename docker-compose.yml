@@ -33,6 +33,7 @@ services:
       args:
         IMAGE: node:latest
         EXEC_LOCATION: node
+        DEP_INSTALL_CMD: npm install
     image: try-it-node:latest
     command: ["bash", "run.sh"]
 
