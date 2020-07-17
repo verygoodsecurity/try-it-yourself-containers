@@ -8,11 +8,11 @@ import org.apache.http.impl.client.HttpClients;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-public class App {
+public class InboundIntegration {
   public static void main(String[] args) throws IOException {
     CloseableHttpClient client = HttpClients.createDefault();
     HttpPost httpPost = new HttpPost("https://tntsfeqzp4a.sandbox.verygoodproxy.com/post");
-    httpPost.setEntity(new StringEntity("{"account_number":"account_value"}"));
+    httpPost.setEntity(new StringEntity("{\"account_number\":\"account_value\"}"));
     httpPost.setHeader("Content-Type", "application/json");
 
     CloseableHttpResponse response = client.execute(httpPost);

@@ -7,17 +7,25 @@ services:
       args:
         IMAGE: alpine
         EXEC_LOCATION: bash
-        DEP_INSTALL_CMD: apk add --update curl bash
+        DEP_INSTALL_CMD: apk add --update curl bash jq
     image: try-it-bash:latest
-    env_file:
-      - .env
-    command: bash -c "bash inbound-integration.sh && bash outbound-integration.sh"
+    command: ["bash", "run.sh"]
 
   # try-it-go:
-  #     image: redis
+  #     image:
 
   # try-it-java:
-  #     image: redis
+  #   build: 
+  #     context: .
+  #     args:
+  #       IMAGE: openjdk:latest
+  #       EXEC_LOCATION: java
+  #       DEP_INSTALL_CMD: javac InboundIntegration.java
+  #   image: try-it-python:latest
+  #   command: bash -c "java InboundIntegration"
+
+  # try-it-php:
+  #     image: 
 
   try-it-python:
     build: 
@@ -27,17 +35,13 @@ services:
         EXEC_LOCATION: python
         DEP_INSTALL_CMD: pip install -r requirements.txt
     image: try-it-python:latest
-    env_file:
-      - .env
-    command: bash -c "python inbound-integration.py && python outbound-integration.py"
+    command: ["bash", "run.sh"]
 
-  try-it-ruby:
-    build: 
-      context: .
-      args:
-        IMAGE: ruby:2.7.1
-        EXEC_LOCATION: ruby
-    image: try-it-ruby:latest
-    env_file:
-      - .env
-    command: bash -c "ruby inbound-integration.rb && ruby outbound-integration.rb"
+  # try-it-ruby:
+  #   build: 
+  #     context: .
+  #     args:
+  #       IMAGE: ruby:2.7.1
+  #       EXEC_LOCATION: ruby
+  #   image: try-it-ruby:latest
+  #   command: bash -c "ruby inbound-integration.rb && ruby outbound-integration.rb"

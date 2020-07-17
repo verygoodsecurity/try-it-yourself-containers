@@ -1,0 +1,92 @@
+{
+  "bash": {
+    "inbound": {
+      "args": {},
+      "data": "{\"account_number\":\"tok_sandbox_oTktJmBaAhUyGHnNJt7WMA\"}",
+      "files": {},
+      "form": {},
+      "headers": {
+        "Accept": "*/*",
+        "Connection": "close",
+        "Content-Length": "55",
+        "Content-Type": "application/json",
+        "Host": "echo.apps.verygood.systems",
+        "User-Agent": "curl/7.69.1",
+        "Vgs-Request-Id": "17c17c87a918354024502a7ad4c05e16",
+        "Vgs-Tenant": "tntsfeqzp4a",
+        "X-Forwarded-Host": "tntsfeqzp4a.sandbox.verygoodproxy.com"
+      },
+      "json": {
+        "account_number": "tok_sandbox_oTktJmBaAhUyGHnNJt7WMA"
+      },
+      "origin": "62.80.183.186, 52.72.130.32, 34.194.18.145, 10.22.88.214",
+      "url": "https://echo.apps.verygood.systems/post"
+    },
+    "outbound": {
+      "args": {},
+      "data": "{\"account_number\":\"ACC00000000000000000\"}",
+      "files": {},
+      "form": {},
+      "headers": {
+        "Accept": "*/*",
+        "Connection": "close",
+        "Content-Length": "41",
+        "Content-Type": "application/json",
+        "Host": "echo.apps.verygood.systems",
+        "User-Agent": "curl/7.69.1",
+        "Vgs-Request-Id": "2cd250f4dd01b410"
+      },
+      "json": {
+        "account_number": "ACC00000000000000000"
+      },
+      "origin": "34.194.18.145, 10.22.116.175",
+      "url": "https://echo.apps.verygood.systems/post"
+    }
+  },
+  "python": {
+    "inbound": {
+      "args": {},
+      "data": "{\"account_number\":\"tok_sandbox_8EYpQWNZ9XsQxN3b8pvfcv\"}",
+      "files": {},
+      "form": {},
+      "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate",
+        "Connection": "close",
+        "Content-Length": "55",
+        "Content-Type": "application/json",
+        "Host": "echo.apps.verygood.systems",
+        "User-Agent": "python-requests/2.23.0",
+        "Vgs-Request-Id": "802f4e7122668f992d44ded322cb30cc",
+        "Vgs-Tenant": "tntsfeqzp4a",
+        "X-Forwarded-Host": "tntsfeqzp4a.sandbox.verygoodproxy.com"
+      },
+      "json": {
+        "account_number": "tok_sandbox_8EYpQWNZ9XsQxN3b8pvfcv"
+      },
+      "origin": "62.80.183.186, 52.6.216.177, 34.206.157.22, 10.22.109.62",
+      "url": "https://echo.apps.verygood.systems/post"
+    },
+    "outbound": {
+      "args": {},
+      "data": "{\"account_number\":\"ACC00000000000000000\"}",
+      "files": {},
+      "form": {},
+      "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate",
+        "Connection": "close",
+        "Content-Length": "41",
+        "Content-Type": "application/json",
+        "Host": "echo.apps.verygood.systems",
+        "User-Agent": "python-requests/2.23.0",
+        "Vgs-Request-Id": "9cba96f69da3dec2"
+      },
+      "json": {
+        "account_number": "ACC00000000000000000"
+      },
+      "origin": "18.215.58.36, 10.22.87.248",
+      "url": "https://echo.apps.verygood.systems/post"
+    }
+  }
+}

@@ -22,10 +22,10 @@ import javax.net.ssl.SSLContext;
 public class App {
 public static void main(String[] args) throws IOException, GeneralSecurityException {
 
-  final String proxyHost = "{VAULT_HOST}";
-  final int proxyPort = {PORT};
-  final String proxyUser = {USERNAME};
-  final String proxyPassword = {PASSWORD};
+  final String proxyHost = "tntsfeqzp4a.sandbox.verygoodproxy.com";
+  final int proxyPort = 8080;
+  final String proxyUser = USiyQvWcT7wcpy8gvFb1GVmz;
+  final String proxyPassword = 2b48a642-615a-4b3c-8db5-e02a88147174;
   HttpHost proxy = new HttpHost(proxyHost, proxyPort);
 
   CredentialsProvider provider = new BasicCredentialsProvider();
@@ -39,9 +39,9 @@ public static void main(String[] args) throws IOException, GeneralSecurityExcept
     .setSSLContext(buildSSLContext())
     .build();
 
-  HttpPost httpPost = new HttpPost("{VGS_SAMPLE_ECHO_SERVER}/post");
+  HttpPost httpPost = new HttpPost("https://echo.apps.verygood.systems/post");
   httpPost.setHeader("Content-Type", "application/json");
-  httpPost.setEntity(new StringEntity("{\"account_number\":\"{ALIAS}\"}"));
+  httpPost.setEntity(new StringEntity("{"account_number":"tok_sandbox_w8CBfH8vyYL2xWSmMWe3Ds"}"));
 
   CloseableHttpResponse response = client.execute(httpPost);
 

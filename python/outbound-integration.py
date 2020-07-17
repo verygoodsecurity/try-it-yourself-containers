@@ -5,4 +5,4 @@ os.environ['HTTPS_PROXY'] = 'https://USiyQvWcT7wcpy8gvFb1GVmz:2b48a642-615a-4b3c
 response = requests.post('https://echo.apps.verygood.systems/post',
                          json={'account_number': 'tok_sandbox_w8CBfH8vyYL2xWSmMWe3Ds'},
                          verify='/opt/app/cert.pem')
-print(f"Response {response.status_code} {response.reason}: {response.json()}")
+print(response.text)
