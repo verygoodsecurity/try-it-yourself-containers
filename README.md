@@ -2,4 +2,4 @@
 
 Languages: bash, go, java, python, ruby
 
-Just run `main.sh`.
+Just run `./main.sh`.

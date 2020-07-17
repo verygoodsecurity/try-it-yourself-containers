@@ -27,6 +27,15 @@ services:
   # try-it-php:
   #     image: 
 
+  try-it-node:
+    build: 
+      context: .
+      args:
+        IMAGE: node:latest
+        EXEC_LOCATION: node
+    image: try-it-node:latest
+    command: ["bash", "run.sh"]
+
   try-it-python:
     build: 
       context: .
